@@ -14,7 +14,7 @@ _G._packer.inside_compile = true
 
 local time
 local profile_info
-local should_profile = false
+local should_profile = true
 if should_profile then
   local hrtime = vim.loop.hrtime
   profile_info = {}
@@ -124,6 +124,22 @@ _G.packer_plugins = {
     path = "C:\\Users\\kevin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\hlargs.nvim",
     url = "https://github.com/m-demare/hlargs.nvim"
   },
+  ["inc-rename.nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15inc_rename\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\kevin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\inc-rename.nvim",
+    url = "https://github.com/smjonas/inc-rename.nvim"
+  },
+  ["incline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\kevin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\incline.nvim",
+    url = "https://github.com/b0o/incline.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\kevin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "C:\\Users\\kevin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspkind-nvim",
@@ -170,6 +186,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\kevin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neotest-vitest",
     url = "https://github.com/marilari88/neotest-vitest"
   },
+  ["noice.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\kevin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\noice.nvim",
+    url = "https://github.com/folke/noice.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\kevin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "C:\\Users\\kevin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
@@ -194,6 +220,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\kevin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "C:\\Users\\kevin\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -277,6 +308,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for neotest]], true)
 try_loadstring("\27LJ\2\n%\0\0\2\0\3\0\0046\0\0\0009\0\1\0009\0\2\0D\0\1\0\vgetcwd\afn\bvimØ\1\1\0\b\0\v\1\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\t\0004\3\3\0006\4\0\0'\6\3\0B\4\2\0025\6\4\0005\a\5\0=\a\6\0063\a\a\0=\a\b\6B\4\2\0?\4\0\0=\3\n\2B\0\2\1K\0\1\0\radapters\1\0\0\bcwd\0\benv\1\0\1\aCI\2\1\0\2\16jestCommand\16npm test --\19jestConfigFile\26custom.jest.config.ts\17neotest-jest\nsetup\fneotest\frequire\3€€À™\4\0", "config", "neotest")
 time([[Config for neotest]], false)
+-- Config for: inc-rename.nvim
+time([[Config for inc-rename.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15inc_rename\frequire\0", "config", "inc-rename.nvim")
+time([[Config for inc-rename.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

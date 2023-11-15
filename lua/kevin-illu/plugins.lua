@@ -8,7 +8,7 @@ end
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
+return packer.startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -51,7 +51,20 @@ return require('packer').startup(function(use)
   use 'm-demare/hlargs.nvim'
   use 'RRethy/vim-illuminate'
   use "goolord/alpha-nvim"
+  use "lukas-reineke/indent-blankline.nvim"
 
+
+  -- ui improvements
+  use 'MunifTanjim/nui.nvim'
+  use 'rcarriga/nvim-notify'
+  use { 'folke/noice.nvim' }
+  use "b0o/incline.nvim"
+  use {
+    "smjonas/inc-rename.nvim",
+    config = function()
+      require("inc_rename").setup()
+    end,
+  }
 
   -- web development
   use {

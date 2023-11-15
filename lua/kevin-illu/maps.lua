@@ -40,10 +40,11 @@ keymap.set("n", "<S-Right>", "<cmd>vertical resize -2<CR>")
 keymap.set("n", "<S-Left>", "<cmd>vertical resize +2<CR>")
 
 -- Edit Files
-keymap.set('n', '<C-s>', ':w<CR>')
+keymap.set('n', '<C-s>', ':silent w<CR>')
 keymap.set('n', '<S-q>', ':wq!<CR>')
 keymap.set('n', 'qq', ':q!<CR>')
 keymap.set('n', '<C-e>', ':e .<CR>')
+keymap.set('n', 'rn', ':IncRename ')
 
 -- Paste over currently selected text without yanking it
 keymap.set("v", "p", '"_dP')
