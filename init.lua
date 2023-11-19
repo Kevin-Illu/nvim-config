@@ -8,7 +8,7 @@ local has = vim.fn.has
 local is_win = has "win32"
 
 xpcall(function()
-  vim.cmd('colorscheme xcodehc')
+  vim.cmd('colorscheme everforest')
 end, function()
   vim.cmd('colorscheme murphy')
 end)

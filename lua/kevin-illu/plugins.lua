@@ -58,7 +58,7 @@ return packer.startup(function(use)
   use 'MunifTanjim/nui.nvim'
   use 'rcarriga/nvim-notify'
   use { 'folke/noice.nvim' }
-  use "b0o/incline.nvim"
+  -- use "b0o/incline.nvim"
   use {
     "smjonas/inc-rename.nvim",
     config = function()
@@ -102,4 +102,6 @@ return packer.startup(function(use)
   -- themes
   use 'xiyaowong/transparent.nvim'
   use 'arzg/vim-colors-xcode'
+  use 'ramojus/mellifluous.nvim'
+  use 'sainnhe/everforest'
 end)
