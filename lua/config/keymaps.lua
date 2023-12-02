@@ -1,4 +1,11 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+
 local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
+
+keymap.set("n", "x", '"_x')
 
 -- Remap for dealing with word wrap
 keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
@@ -49,13 +56,11 @@ keymap.set('n', 'rn', ':IncRename ')
 -- Paste over currently selected text without yanking it
 keymap.set("v", "p", '"_dP')
 
--- Move Lines
-keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi")
-keymap.set("n", "<A-j>", ":m .+1<CR>==")
-keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
-keymap.set("n", "<A-k>", ":m .-2<CR>==")
-keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
-keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
-
 -- TODO loc list
-keymap.set('n', '<A-l>j', ':TodoLocList<CR>')
+-- keymap.set('n', '<A-l>j', ':TodoLocList<CR>')
+
+
+-- Diagnostics
+keymap.set("n", "<C-j>", function()
+  vim.diagnostic.goto_next()
+end, opts)
