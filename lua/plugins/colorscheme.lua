@@ -5,7 +5,7 @@ return {
     priority = 1000,
     opts = function()
       return {
-        -- transparent = true,
+        transparent = true,
       }
     end,
   },
@@ -15,7 +15,7 @@ return {
     priority = 1000,
     opts = function()
       return {
-        -- transparent = false,
+        transparent = true,
       }
     end,
   },
@@ -35,14 +35,17 @@ return {
     "ellisonleao/gruvbox.nvim",
     lazy = true,
     priority = 1000,
-    opts = function()
-      return {
-        -- transparent_mode = true,
-      }
-    end,
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        float = "transparent",
+      },
+    },
     config = function()
       require("notify").setup({
-        -- background_colour = "#000000",
+        background_colour = "#000000",
+        merge_duplicates = true
       })
     end,
   },
